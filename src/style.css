@@ -54,6 +54,7 @@ canvas {
   align-items: center;
   justify-content: center;
   color: #FFF;
+  pointer-events: none;
 }
 
 .l-text > .ttl {
