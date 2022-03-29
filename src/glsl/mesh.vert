@@ -57,5 +57,5 @@ void main(){
   gl_Position = projectionMatrix * mvPosition;
   gl_PointSize = size;
 
-  vColor = color;
+  vColor = vec3(0.0);
 }

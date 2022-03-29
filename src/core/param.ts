@@ -13,9 +13,10 @@ export class Param {
   private _dat: any;
   private _stats: any;
 
+  public ang:number = 0;
+
   public particle = {
-    x:{value:0, min:-100, max:100},
-    y:{value:0, min:-100, max:100},
+    ang:{value:0, min:0, max:3600},
   }
 
   constructor() {

@@ -2,13 +2,14 @@ import { Update } from "../libs/update";
 import { Resize } from "../libs/resize";
 import { Object3D } from 'three/src/core/Object3D';
 import { Mesh } from 'three/src/objects/Mesh';
+import { Util } from "../libs/util";
 
 export class MyObject3D extends Object3D {
 
   private _updateHandler:any
   private _layoutHandler:any
 
-  protected _c:number = 0
+  protected _c:number = Util.instance.randomInt(0, 1000)
 
   constructor() {
     super()
