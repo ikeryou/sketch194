@@ -87,7 +87,7 @@ export class Item extends MyObject3D {
 
     // 表示チェック
     const test = Param.instance.ang
-    if(test >= this._id * ((360 * 4) / Conf.instance.NUM)) {
+    if(test >= this._id * ((360 * 2) / Conf.instance.NUM)) {
       this._show()
     } else {
       this._hide()
