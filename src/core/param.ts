@@ -16,7 +16,7 @@ export class Param {
   public ang:number = 0;
 
   public particle = {
-    ang:{value:0, min:0, max:3600},
+    ang:{value:0, min:0, max:360*4},
   }
 
   constructor() {

@@ -37,11 +37,6 @@ export class Con extends Canvas {
     })
 
     for(let i = 0; i < Conf.instance.NUM; i++) {
-      // const mat = new MeshBasicMaterial({
-      //   color:new Color(Util.instance.random(0, 1), Util.instance.random(0, 1), Util.instance.random(0, 1)),
-      //   transparent:true
-      // })
-
       const item = new Item({
         id:i,
         geo:geo,
@@ -50,6 +45,12 @@ export class Con extends Canvas {
       this._con.add(item)
       this._item.push(item)
     }
+
+    // 並び替え
+    Util.instance.sort(this._item, 'dist', true)
+    this._item.forEach((val,i) => {
+      val.resetId(i + 1)
+    })
 
     // センサー取得
     if(!Conf.instance.FLG_TEST && window.DeviceOrientationEvent) {
@@ -106,9 +107,6 @@ export class Con extends Canvas {
     } else {
       Param.instance.ang = this._val + (this._rotCnt * 360);
     }
-
-
-
 
     if (this.isNowRenderFrame()) {
       this._render()
